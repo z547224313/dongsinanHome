@@ -9,10 +9,21 @@
         >
       </div>
       <div class="weather">
-        <span>{{ getDate }}</span>
-        <span>{{ getWeek }}</span>
-        <span>{{ temperature }}</span>
-        <span>☀️</span>
+        <span style="margin-right: 15px">{{ getDate }}</span>
+        <span style="margin-right: 15px">{{ getWeek }}</span>
+        <span style="margin-right: 15px">{{ temperature }}</span>
+        <span>晴</span>
+      </div>
+    </div>
+    <div class="content">
+      <div class="main">
+        <div class="nav">
+          <span>首页</span>
+          <span>通知</span>
+          <span>政策</span>
+          <span>党建</span>
+          <span>魅力东四南</span>
+        </div>
       </div>
     </div>
   </div>
@@ -41,9 +52,9 @@ export default {
 
 <style scoped lang="scss">
 .Home {
+  width: 100%;
   .top {
     height: 545px;
-    width: 100%;
     position: relative;
   }
   .bg {
@@ -82,6 +93,29 @@ export default {
       font-size: 21px;
       font-weight: 700;
       color: #bd1a2d;
+    }
+  }
+  .content {
+    height: 550px;
+    background-color: #bd1a2d;
+    .main {
+      width: 1200px;
+      height: 100%;
+      margin: 0 auto;
+      padding: 40px 0;
+      .nav {
+        font-size: 30px;
+        font-weight: 400;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        span {
+          cursor: pointer;
+          &:hover{
+            text-decoration: underline;
+          }
+        }
+      }
     }
   }
 }
