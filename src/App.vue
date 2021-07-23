@@ -7,7 +7,8 @@
 
 <style lang="scss">
 #app {
-  min-width: 1200px;
+  --content: 1200px;
+  min-width: var(--content);
 }
 </style>
 <script>

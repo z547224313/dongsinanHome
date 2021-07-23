@@ -19,7 +19,7 @@
       <div class="main">
         <div class="nav">
           <span>首页</span>
-          <span>通知</span>
+          <span @click="noticeClick()">通知</span>
           <span>政策</span>
           <span>党建</span>
           <span>魅力东四南</span>
@@ -53,7 +53,7 @@
             <span>便民服务</span>
           </div>
           <div class="icon">
-            <div v-for="item in icons" :key="item" class="items">
+            <div v-for="item in icons" :key="item.name" class="items">
               <div class="service-item">
                 <img :src="item.icon" alt="" />
                 <p>{{ item.name }}</p>
@@ -139,6 +139,11 @@ export default {
     },
     getWeek() {
       return moment().format("dddd");
+    },
+  },
+  methods: {
+    noticeClick() {
+      this.$router.push("/notice");
     },
   },
 };
