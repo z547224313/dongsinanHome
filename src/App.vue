@@ -5,7 +5,11 @@
   </div>
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+#app {
+  min-width: 1200px;
+}
+</style>
 <script>
 import Bottom from "@/components/Bottom";
 export default {
