@@ -54,13 +54,17 @@
           </div>
           <div class="icon">
             <div v-for="item in icons" :key="item" class="items">
-              <div>
-                <img :src="item" alt="" />
+              <div class="service-item">
+                <img :src="item.icon" alt="" />
+                <p>{{ item.name }}</p>
               </div>
             </div>
           </div>
         </div>
         <div class="fun">
+          <div class="fun-title">
+            <span>在线办事为，您提供方便</span>
+          </div>
           <div class="fun-items" v-for="item in fun" :key="item.name">
             <div class="name">
               <span>{{ item.name }}</span>
@@ -100,7 +104,14 @@ export default {
       newsContent: `
 新冠疫苗开始预约，请符合接种条件的居民尽快预约。
 打疫苗，携手共创美好街区，东四南街区入选中国文化街区榜单.`,
-      icons: [icon1, icon2, icon3, icon4, icon5, icon6],
+      icons: [
+        { name: "生鲜超市", icon: icon1 },
+        { name: "交通出行", icon: icon2 },
+        { name: "周边玩乐", icon: icon3 },
+        { name: "社会保障", icon: icon4 },
+        { name: "生活缴费", icon: icon5 },
+        { name: "文化体育", icon: icon6 },
+      ],
       fun: [
         {
           name: "网上预约办事",
@@ -268,6 +279,12 @@ export default {
           font-size: 24px;
           font-weight: 400;
         }
+        .service-item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          font-size: 14px;
+        }
         .icon {
           img {
             cursor: pointer;
@@ -288,11 +305,17 @@ export default {
       }
       .fun {
         box-sizing: border-box;
-        padding-top: 100px;
         height: 414px;
         width: 600px;
         display: flex;
         flex-wrap: wrap;
+        position: relative;
+        .fun-title {
+          margin-bottom: 65px;
+          font-size: 32px;
+          font-weight: 700;
+          color: #333333;
+        }
         .fun-items {
           padding-top: 35px;
           padding-left: 30px;
