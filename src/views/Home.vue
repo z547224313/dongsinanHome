@@ -40,7 +40,7 @@
               <span>{{ newsContent }}</span>
             </div>
             <div class="news-more">
-              <span>更多</span>
+              <span @click="noticeClick()">更多</span>
             </div>
           </div>
         </div>
@@ -53,10 +53,9 @@
             <span>便民服务</span>
           </div>
           <div class="icon">
-            <div v-for="item in icons" :key="item.name" class="items">
-              <div class="service-item">
+            <div v-for="(item,index) in icons" :key="item" class="items">
+              <div @click="goSupermarket(index)">
                 <img :src="item.icon" alt="" />
-                <p>{{ item.name }}</p>
               </div>
             </div>
           </div>
@@ -145,6 +144,10 @@ export default {
     noticeClick() {
       this.$router.push("/notice");
     },
+    goSupermarket(index){
+      this.$router.push('/market');
+      console.log(index);
+    }
   },
 };
 </script>
