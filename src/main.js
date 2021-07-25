@@ -9,6 +9,10 @@ import store from "./store";
 Vue.config.productionTip = false;
 Vue.use(ElementUI)
 
+router.afterEach((to,from,next) => {
+  window.scrollTo(0,0);
+})
+
 new Vue({
   router,
   store,
