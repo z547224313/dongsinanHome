@@ -75,6 +75,7 @@
         </div>
       </div>
     </div>
+    <Bottom />
   </div>
 </template>
 
@@ -93,8 +94,12 @@ import icon7 from "@/assets/images/home/u44.png";
 import icon8 from "@/assets/images/home/u46.png";
 import icon9 from "@/assets/images/home/u48.png";
 import icon10 from "@/assets/images/home/u74.png";
+import Bottom from "@/components/Bottom";
 export default {
   name: "Home",
+  components: {
+    Bottom
+  },
   data() {
     return {
       temperature: "30℃/12℃",

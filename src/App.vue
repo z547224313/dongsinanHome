@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <router-view />
-    <Bottom />
   </div>
 </template>
 
@@ -12,9 +11,11 @@
 }
 </style>
 <script>
-  import Bottom from "@/components/Bottom";
   export default {
-    components: { Bottom },
+    components: { },
+    created() {
+      document.title = '东四南街道';
+    },
   };
 </script>
 <style scoped lang="scss">
