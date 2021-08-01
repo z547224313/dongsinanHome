@@ -14,15 +14,17 @@
         :msg="msg"
       />
     </div>
+    <Bottom />
   </div>
 </template>
 
 <script>
 import Top from "@/components/Top";
 import NoticeItem from "@/components/notice/NoticeItem";
+import Bottom from "@/components/Bottom";
 export default {
   name: "Notice",
-  components: { NoticeItem, Top },
+  components: { NoticeItem, Top, Bottom },
   data() {
     return {
       navTitle: ["公告", "通知", "政策", "热点"],

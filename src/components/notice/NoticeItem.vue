@@ -6,7 +6,7 @@
     </div>
     <div class="content">
       <div class="content-item" v-for="item in msg" :key="item.title">
-        <span class="title">{{ item.title }}</span>
+        <span class="title" @click="goDetail(id)">{{ item.title }}</span>
         <span class="date">{{ item.date }}</span>
       </div>
     </div>
@@ -19,6 +19,12 @@ export default {
   props: {
     title: String,
     msg: Array,
+  },
+  methods: {
+    goDetail(e){
+      console.log(e);
+      this.$router.push({path:'/noticeDetail'})
+    }
   },
 };
 </script>

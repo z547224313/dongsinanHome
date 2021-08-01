@@ -72,6 +72,7 @@
                 <div class="more">更多 >></div>
             </div>
         </div>
+        <Bottom />
     </div>
 </template>
 
@@ -81,8 +82,9 @@
     import img2 from "@/assets/images/market/u598.png";
     import img3 from "@/assets/images/market/u599.png";
     import img4 from "@/assets/images/market/u600.png";
+    import Bottom from "@/components/Bottom";
     export default {
-        components: { Header },
+        components: { Header, Bottom },
         data() {
             return {
                 img: [img1, img2, img3, img4],
