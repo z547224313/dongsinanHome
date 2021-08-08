@@ -21,7 +21,7 @@
           <span>首页</span>
           <span @click="noticeClick()">通知</span>
           <span>政策</span>
-          <span>党建</span>
+          <span @click="historyClick()">党建</span>
           <span>魅力东四南</span>
         </div>
         <div class="middle">
@@ -54,8 +54,9 @@
           </div>
           <div class="icon">
             <div v-for="(item,index) in icons" :key="item" class="items">
-              <div @click="goSupermarket(index)">
-                <img :src="item.icon" alt="" />
+              <div @click="goSupermarket(index)" style="display: flex;flex-direction: column;align-items: center">
+                <img :src="item.icon" alt="" style="padding-bottom: 10px"/>
+                <span> {{ item.name}} </span>
               </div>
             </div>
           </div>
@@ -152,6 +153,9 @@ export default {
     goSupermarket(index){
       this.$router.push('/market');
       console.log(index);
+    },
+    historyClick() {
+      this.$router.push('/history')
     }
   },
 };

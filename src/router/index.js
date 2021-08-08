@@ -24,6 +24,11 @@ const routes = [
     name: "noticeDetail",
     component: () => import("@/views/NoticeDetail"),
   },
+  {
+    path: '/history',
+    name: 'History',
+    component: () => import('@/views/History.vue'),
+  }
 ];
 
 const router = new VueRouter({

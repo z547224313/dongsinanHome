@@ -29,7 +29,6 @@
             <div v-html="content" class="content_class" id="content" />
         </div>
     </div>
-    </div>
 </template>
 
 <script>
